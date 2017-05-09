@@ -1,0 +1,115 @@
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Variables
+
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Variables
+--------------------------------------------------------------*/
+
+$color-closed: #d9534f;
+$color-closed-border: #d43f3a;
+$color-caution: #fff000;
+$color-caution-border: darken($color-caution, 5%);
+$color-open: #5cb85c;
+$color-open-border: #4cae4c;
+
+$color-white: #fff;
+$color-blue: #0085ba;
+
+/*--------------------------------------------------------------
+# Trail Layout Styling
+--------------------------------------------------------------*/
+
+.networks {
+	.network {
+		&:not(:first-of-type) {
+			padding-top: 30px;
+			margin-top: 15px;
+			border-top: 2px solid #ccc;
+		}
+	}
+}
+
+h2.network-title.network-title {
+	margin-bottom: 10px;
+}
+
+.network-status {
+	@media screen and (min-width: 992px) {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.status-count {
+		span:first-child {
+			font-weight: 700;
+		}
+	}
+}
+
+.trail {
+	.trail-header {
+		display: flex;
+		justify-content: space-between;
+		padding: 15px;
+
+		&.status-Open {
+			background-color: $color-open;
+		}
+
+		&.status-Caution {
+			background-color: $color-caution;
+		}
+
+		&.status-Closed {
+			background-color: $color-closed;
+		}
+	}
+
+	.trail-name {
+		margin: 0;
+	}
+
+	.trail-status {
+		font-weight: 700;
+	}
+
+	.trail-meta	{
+		display: flex;
+		flex-wrap: wrap;
+		padding: 15px 0;
+		margin: 0 -15px;
+
+		.left-side,
+		.trail-description {
+			width: 100%;
+			padding: 0 15px;
+			box-sizing: border-box;
+		}
+
+		.left-side {
+			@media screen and (min-width: 992px) {
+				width: 25%;
+			}
+		}
+
+		.trail-description {
+			@media screen and (min-width: 992px) {
+				width: 75%;
+			}
+		}
+	}
+
+	.difficulty-icon {
+		img {
+			width: 50px;
+		}
+	}
+
+	.trail-length {
+		font-weight: 700;
+	}
+}
